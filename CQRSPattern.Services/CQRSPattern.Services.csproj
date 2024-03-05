@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+ 
+
+  <ItemGroup>
+    <ProjectReference Include="..\CQRSPattern.Common\CQRSPattern.Common.csproj" />
+    <ProjectReference Include="..\CQRSPattern.Entity\CQRSPattern.Entity.csproj" />
+    <ProjectReference Include="..\CQRSPattern.Repository\CQRSPattern.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
