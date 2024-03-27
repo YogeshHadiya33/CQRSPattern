@@ -18,22 +18,7 @@ public static class AuthenticationInstaller
         var keyValue = configuration[identitySettings?.JwtKey];
         var issuerValue = configuration[identitySettings?.JwtIssuer];
         var audienceValue = configuration[identitySettings?.JwtAudience];
-         
-       //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-       //   .AddJwtBearer(options =>
-       //   {
-       //       options.TokenValidationParameters = new TokenValidationParameters
-       //       {
-       //           ValidateIssuer = true,
-       //           ValidateAudience = true,
-       //           ValidateLifetime = true,
-       //           ValidateIssuerSigningKey = true,
-       //           ValidIssuer = issuerValue,
-       //           ValidAudience = audienceValue,
-       //           IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyValue))
-       //       };
-       //   });
-
+          
         services
             .AddAuthorization()
             .AddAuthentication(x =>

@@ -8,7 +8,7 @@ public class SignInCommandValidator : AbstractValidator<SignInCommand>
     {
         RuleFor(x => x.SignInModel.Username)
             .NotEmpty()
-            .WithMessage("Username is required");
+            .WithMessage("User name is required");
 
         RuleFor(x => x.SignInModel.Password)
             .NotEmpty()

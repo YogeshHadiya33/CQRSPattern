@@ -30,7 +30,7 @@ public class SignInCommandHandler : ICommandHandler<SignInCommand, ICommandResul
     {
         var user = await _userManager.FindByEmailAsync(request.SignInModel.Username);
         if (user is null)
-            return _commandResultFactory.Create(false, StatusCodes.Status404NotFound, "Invalid username");
+            return _commandResultFactory.Create(false, StatusCodes.Status404NotFound, "Invalid user name");
 
         var signInResult = await _signInManager.CheckPasswordSignInAsync(user, request.SignInModel.Password, false);
         if (!signInResult.Succeeded)

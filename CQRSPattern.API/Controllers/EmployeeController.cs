@@ -1,4 +1,5 @@
 ﻿using CQRSPattern.API.Contracts.V1;
+using CQRSPattern.API.Filter;
 using CQRSPattern.Entity.Employee.Bussiness;
 using CQRSPattern.Services.Features.Employees.Command.Create;
 using CQRSPattern.Services.Features.Employees.Command.Delete;
@@ -12,7 +13,7 @@ using System.Security.Claims;
 
 namespace CQRSPattern.API.Controllers;
 
-[Authorize]
+[AuthorizationFilter]
 public class EmployeeController : BaseController
 {
     private readonly IMediator _mediator;
